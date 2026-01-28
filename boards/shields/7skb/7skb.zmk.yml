@@ -1,0 +1,14 @@
+
+file_format: "1"
+id: 7skb
+name: 7skb
+type: shield
+features:
+  - keys
+  - studio
+outputs:
+  - usb
+  - ble
+siblings:
+  - 7skb_left
+  - 7skb_right
