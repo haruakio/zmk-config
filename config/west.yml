@@ -7,10 +7,10 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      # revision: main
       import: app/west.yml
-    - name: zmk-component-bmp-boost
-      remote: sekigon-gonnoc
-      import: west.yml
+    # - name: zmk-component-bmp-boost
+    #   remote: sekigon-gonnoc
+    #   import: west.yml
   self:
     path: config
