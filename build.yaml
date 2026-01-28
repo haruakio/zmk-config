@@ -1,13 +1,13 @@
 include:
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: 7skb_left
     # snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: 7skb_right
     # snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: sofle_left
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: sofle_right
