@@ -4,6 +4,9 @@ if SHIELD_7SKB_LEFT
 config ZMK_KEYBOARD_NAME
     default "7skb"
 
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+    
 endif
 
 if SHIELD_7SKB_LEFT || SHIELD_7SKB_RIGHT
