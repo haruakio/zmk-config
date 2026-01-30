@@ -18,7 +18,7 @@
 &kp TAB   &kp Q  &kp W    &kp E    &kp R     &kp T            &kp Y  &kp U     &kp I     &kp O    &kp P    &kp LBKT  &kp RBKT  &kp BSLH
 &kp CAPS &kp A  &kp S    &kp D    &kp F     &kp G            &kp H  &kp J     &kp K     &kp L    &lt 1 SEMI &kp SQT   &kp RET
 &kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B            &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT &mo 1
-                 &to 3    &kp LALT &kp LWIN  &kp SPACE        &lt 2 SPACE  &kp RWIN &kp LEFT  &kp RIGHT
+                 &mo 3    &kp LALT &kp LWIN  &kp SPACE        &lt 2 SPACE  &kp RWIN &kp LEFT  &kp RIGHT
             >;
         };
 
