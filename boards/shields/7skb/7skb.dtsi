@@ -46,9 +46,33 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)       RC(3,6)  RC(3,7)  RC(3,8) 
         ;
     };
 
+    /* Wake専用GPIO key（任意のrowピン、例:最初row D4） */
+    keys {
+        compatible = "gpio-keys";
+        wakeup_key: wakeup_key {
+            gpios = <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        };
+    };
+
+    /* Trigger: col全ピンactiveに */
+    wakeup_trigger: wakeup_trigger {
+        compatible = "zmk,gpio-key-wakeup-trigger";
+        trigger = <&wakeup_key>;
+        wakeup-source;
+        extra-gpios =
+            <&pro_micro 21 GPIO_ACTIVE_HIGH>   // F4 col0
+            ,<&pro_micro 20 GPIO_ACTIVE_HIGH>   // F5 col1
+            ,<&pro_micro 19 GPIO_ACTIVE_HIGH>   // F6 col2
+            ,<&pro_micro 18 GPIO_ACTIVE_HIGH>   // F7 col3
+            ,<&pro_micro 15 GPIO_ACTIVE_HIGH>   // B1 col4
+            ,<&pro_micro 14 GPIO_ACTIVE_HIGH>   // B3 col5
+            ,<&pro_micro 16 GPIO_ACTIVE_HIGH>   // B2 col6
+            ,<&pro_micro 9  GPIO_ACTIVE_HIGH>;  // B5 col7
+    };
+
     soft_off_wakers {
         compatible = "zmk,soft-off-wakeup-sources";
-        wakeup-sources = <&kscan0>;
+        wakeup-sources = <&wakeup_trigger>;  // kscan0から変更
     };
 };
 
